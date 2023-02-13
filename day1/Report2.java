@@ -5,7 +5,7 @@ public class Report2 {
         int i = 100;
         long l = 1000L;
 //3-1. 다음 중 형변환을 생략할 수 있는 것은? (모두 고르시오) 1,4,5
-        b = (byte)i;                // 생략가능. byte는 127까지 저장 가능
+        b = (byte)i;                // 생략 불가능. byte보다 int가 큰 개념!
         ch = (char)b;               //생략 불가. char는 0~ 65535까지인데 byte는 음수가 올 수 있으므로 자동형변환 불가.
         short s = (short)ch;        // 불가. short는 -32768~32767, char는 0~65535이므로 불가능
         float f = (float)l;         // 생략가능. float가 long보다 범위가 크므로
