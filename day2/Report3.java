@@ -168,6 +168,21 @@ class Exercise4_9 {
     }
 }//예상 결과 : sum=15
 
+// 아주 깔끔한 모범답안. 참고용 업로드!!!
+class Ex4_9 {
+    public static void main(String[] args) {
+        int num = 12345;
+        int sum = 0;
+
+        while(num > 0) {
+            sum += num%10;
+            num /= 10;
+
+        }
+        System.out.println(sum);
+    }
+}
+
 
 
 //4-10. 다음은 숫자맞추기 게임을 작성한 것이다. 1과 100사이의 값을 반복적으로 입력해서
