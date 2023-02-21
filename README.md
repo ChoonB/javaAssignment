@@ -3,3 +3,5 @@
 230213 첫날 과제는 day1에 Report1.java와 Report2.java로 업로드 했습니다.
 <br>
 230214 두번째 날 과제는 day2에 Report3.java와 Report4.java로 업로드 했습니다.
+<br>
+230221 세번째 날 과제는 day3 폴더에 Report5.java, Report6.md, Report7폴더로 업로드 했습니다.
