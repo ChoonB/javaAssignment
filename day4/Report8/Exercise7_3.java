@@ -8,7 +8,7 @@ Product(){}를 만들어 준다.
 
 public class Exercise7_3 {
     public static void main(String[] args) {
-        Tv t = new Tv(500);
+        Tv t = new Tv();
         System.out.println(t.price);
     }
 }
