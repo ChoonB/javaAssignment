@@ -1,0 +1,16 @@
+문제 : 
+DisplayTypeA는 displayResultWithOperator가 동작불가
+DisplayTypeB는 displayResult가 동작불가.
+하지만 두 메서드가  display 인터페이스 한군데 있어서
+작동하지 않은 메서드를 A,B가 강제로 구현해서 예외처리를 하고있다.
+
+해결:
+DisplayResult 인터페이스를 만들어 displayResult추상메서드만 두고
+DisplayTypeA가 DisplayResult를 implements 하도록 설정.
+
+DisplayWithOperator 인터페이스를 만들어 displayWithOperator추상메서드만 두고
+DisplayTypeB가 DisplayWithOperator를 implements 하도록 설정.
+
+즉, display 인터페이스 하나에 있던 두 추상메서드를 두개의 인터페이스로 분리해서 저장.
+쓸모없어진 display 인터페이스는 삭제.
+ISP원칙을 지킬 수 있게 되었다.
