@@ -1,0 +1,18 @@
+문제점 : 연산자를 추가할때 마다 Calculator 클래스파일과 Client 클래스파일의
+코드를 수정해야되기 때문에 개방 폐쇄원칙을 위반한다.
+
+해결방법 : 
+AbstractOperation 추상클래스를 만들어
+operate(int f, int s) 추상메서드를 만들고
+각각의 연산 클래스가 이 추상클래스를 부모로 상속받아
+operate 메서드를 오버라이딩하게 만들었다.
+
+Calculator 클래스에서는
+calculate(AbstractOperation abstractOperation,int firstNumber, int secondNumber)
+메서드를 만들어 return으로는 매개변수 AbstractOperation으로 올 수있는 연산 클래스.operate()를 하게 만들고
+client에서 calculator.calculate(연산클래스, firNum,secNum)을 수행하면
+계산기가 돌아가게 만들었다.
+
+이로써 연산자를 추가하려면 그냥 클래스를 하나 만들어 AbstractOperation을 상속받기만하면
+기존의 코드는 건드리지 않고 연산자를 추가할 수 있게 되어
+OCP원칙에 위배되지 않게 된다.
