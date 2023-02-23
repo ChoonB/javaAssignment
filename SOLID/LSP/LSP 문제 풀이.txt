@@ -1,0 +1,6 @@
+문제 : 계산기 클래스에서 나누기 유효성 검사를 따로 한다.
+
+해결 : 부모추상클래스에 boolean valid = true; 변수 하나 만들고
+isInvalid(int secNum); 유효성 검사 메서드를 넣는다
+나누기에서는 secNum이 0일시 valid = false로 바꾸는 유효성 검사를 넣고
+계산기 클래스에서 isInvalid메서드를 써서 에러를 출력한다.
