@@ -7,14 +7,14 @@ public class Bus extends Transportation implements Change {
 
     //  변수
     static Set<Integer> numSet = new HashSet<Integer>();
-    int maxPassengers = 30;
-    int currentPassengers = 0;
 
 
     //    생성자
     Bus(int busNumber) {
         super();
         state = "운행";
+        maxPassengers = 30;
+        basicFare = 1000;
 
         if (!numSet.add(busNumber)) {       // 고유값 생성?
             System.out.printf("%d번은 이미 존재하는 버스 번호입니다.%n새로운 버스 번호를 지정해주세요.%n",busNumber);
@@ -85,10 +85,10 @@ public class Bus extends Transportation implements Change {
                 System.out.println("최대 승객수를 초과했습니다.");
             }else {
                 currentPassengers += numOfPassengers;
-                fare += numOfPassengers*1000;
+                earnedFare += numOfPassengers*basicFare;
                 System.out.println("탑승 승객 수 = " + numOfPassengers);
                 System.out.printf("잔여 승객 수 = %d%n",(maxPassengers-currentPassengers));
-                System.out.println("요금 확인 = " + fare);
+                System.out.println("요금 확인 = " + earnedFare);
             }
         }
 
